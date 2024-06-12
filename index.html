@@ -3,119 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>클릭이벤트 리스너</title>
-    <style>
-        * {margin: 0; padding: 0;}
-        img {max-width: 100%;}
-        #layout{max-width: 900px; margin:auto; border:1px solid red;
-        position: relative; }
-        /*상단*/
-        header{height: 100px; border:5px solid blue; background-color: blanchedalmond ;
-        z-index: 1; position: relative;}
-
-        /*메뉴*/
-            nav:not(.subMenu) {margin: top:305px;}
-            nav> ul {display:flex; list-style: none; justify-content:space-around ;
-             margin-top:30px ;}
-            nav li {/*flex:1;*/  width: 100px;}
-            nav a {display: block;}
-            
-            /*메인메뉴*/
-            .mainMenu {text-align:center;}
-            nav li  .subMenu{transition: .5s;}
-            nav li:hover  .subMenu {/*display: block;*/ height: 120px;}
-
-        /*서브메뉴*/
-        .subMenu {/*display: none;*/ background-color:rgba(255,255,255, .85) ;height: 0; 
-        overflow: hidden;}
-        
-        /*메인*/
-        main {height: 70vh; border:1px solid gray;}
-        main img {height: 100%;}
-        /*하단*/ 
-        footer { height: 100px; background-color: gray;}
-
-        /*공지사항*/
-        #popup {background-color: gold; position: absolute;
-        width: 500px; height: 400px; left: calc((100% / 2) - 250px); top: 120px;
-        border-radius: 30px; padding: 30px; box-sizing: border-box;}
-
-        #popup button{
-            padding: 3px 6px; position: absolute; bottom: 20px; right: 20px;
-
-        }
-
-    </style>
+    <title>강아지 선택하는 스크립트</title>
 </head>
 <body>
-    <div id="layout">
-    <header>
-        <nav>
-            <ul>
-                <li>
-                 <a href="#" class="mainMenu">메뉴1</a>
-                 <nav class="subMenu">
-                    <a href="#">서브메뉴1-1</a>
-                    <a href="#">서브메뉴1-2</a>
-                    
-                 </nav>
-                </li>
-                <li>
-                    <a href="#" class="mainMenu">메뉴2</a>
-                    <nav class="subMenu">
-                       <a href="#">서브메뉴2-1</a>
-                       <a href="#">서브메뉴2-2</a>
-                       <a href="https://naver.com" target="_blank">서브메뉴2-3</a>
-                       <a href="#">서브메뉴2-4</a>
-                       <a href="#">서브메뉴2-5</a>
-                    </nav>
-                   </li>
-                   <li>
-                    <a href="#" class="mainMenu">메뉴3</a>
-                    <nav class="subMenu">
-                       <a href="#">서브메뉴3-1</a>
-                       <a href="#">서브메뉴3-2</a>
-                       <a href="#">서브메뉴3-3</a>
-                       <a href="#">서브메뉴3-4</a>
-                    </nav>
-                   </li>
-                   <li>
-                    <a href="#" class="mainMenu">메뉴4</a>
-                    <nav class="subMenu">
-                       <a href="#">서브메뉴4-1</a>
-                       <a href="#">서브메뉴4-2</a>
-                       <a href="#">서브메뉴4-3</a>
-                    </nav>
-                   </li>
-                   <li>
-                    <a href="#" class="mainMenu">메뉴5</a>
-                    <nav class="subMenu">
-                       <a href="#">서브메뉴5-1</a>
-                       <a href="#">서브메뉴5-2</a>
-                       <a href="#">서브메뉴5-3</a>
-                    </nav>
-                   </li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <img src="images/summer.webp" alt="여름">
-    </main>
-    <footer ></footer>
-    <section id="popup">
-        <h3>공지사항</h3>
-        <button type="button" >닫기</button>
+    <h1 style="max-width: 500px; margin: auto; background-color: black; text-align: center;">강아지 선택하기</h1>
+ <section id="bulb" style="max-width: 500px; margin: auto; border: 5px solid tan; text-align: center;">
+        <h2 style="text-align: center;">강아지</h2> 
+        <img src="images/pu.jpg" alt="강아지" id="zz" style="width:100%">
+        <button type="button" onclick="document.getElementById('zz').src='images/gol.gif'">리트리버</button>
+        <button type="button" onclick="document.getElementById('zz').src='images/pug.gif'">퍼그</button>
+        
     </section>
-    </div>
-
-    <script>
-    const $popup = document.querySelector("footer");
-    $footer.addEventListener("click", bo );
-    
-    function bo(){
-        $popup.style.display = 'block';
-    }
-    
-    </script>
 </body>
 </html>
